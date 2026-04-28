@@ -40,7 +40,8 @@ const Contact = () => {
 
     setLoading(true);
     try {
-      await axios.post('/api/enquiry', form);
+      // REPLACE THIS URL with your actual Vercel Backend URL
+      await axios.post('https://YOUR-BACKEND-URL.vercel.app/api/enquiry', form);
       toast.success('🎉 Enquiry submitted! We\'ll contact you within 24 hours.');
       setForm(initialForm);
       setSubmitted(true);
