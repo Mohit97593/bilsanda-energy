@@ -1,0 +1,218 @@
+.manufacturing-section {
+  background: var(--navy);
+  position: relative;
+}
+
+/* Timeline */
+.mfg-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  margin-bottom: 64px;
+}
+
+.mfg-step {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 0 24px;
+  cursor: pointer;
+}
+
+/* Connector */
+.step-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: 24px;
+}
+
+.step-line {
+  position: absolute;
+  top: 0;
+  bottom: -24px;
+  width: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.4;
+}
+
+.mfg-step:last-child .step-line {
+  display: none;
+}
+
+.step-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--navy);
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.step-dot-inner {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.mfg-step.active .step-dot {
+  transform: scale(1.4);
+}
+
+/* Card */
+.step-card {
+  margin: 16px 0;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.step-card:hover {
+  border-color: var(--border-hover);
+}
+
+.mfg-step.active .step-card {
+  border-color: var(--electric-blue);
+  box-shadow: var(--shadow-blue);
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.step-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.mfg-step.active .step-icon {
+  box-shadow: 0 0 16px currentColor;
+}
+
+.step-info {
+  flex: 1;
+}
+
+.step-num {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.step-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.step-expand {
+  font-size: 22px;
+  color: var(--electric-blue);
+  font-weight: 300;
+  width: 32px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.step-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.step-detail {
+  margin-top: 12px;
+  padding: 10px 16px;
+  border: 1px solid;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  background: rgba(0, 212, 255, 0.05);
+  animation: fadeInUp 0.3s ease;
+}
+
+/* Banner */
+.mfg-banner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 48px;
+  background: var(--gradient-card);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mfg-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-blue);
+}
+
+.banner-stat {
+  text-align: center;
+}
+
+.banner-num {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--electric-blue);
+  line-height: 1;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+}
+
+.banner-unit {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.banner-label {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .mfg-timeline { gap: 0; }
+  .mfg-banner {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 32px 24px;
+  }
+  .banner-num { font-size: 28px; }
+}
+
+@media (max-width: 480px) {
+  .mfg-step { grid-template-columns: 32px 1fr; gap: 0 16px; }
+}

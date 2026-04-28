@@ -1,0 +1,335 @@
+.about-section {
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy-light) 50%, var(--navy) 100%);
+}
+
+/* How It Works */
+.how-it-works {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  margin-bottom: 64px;
+  padding: 48px;
+  background: var(--gradient-card);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+}
+
+.hiw-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  background: var(--gradient-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hiw-text {
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 24px;
+  font-size: 15px;
+}
+
+.hiw-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hiw-step {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 16px;
+  background: var(--blue-glow);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.hiw-step:hover {
+  border-color: var(--electric-blue);
+  color: var(--electric-blue);
+}
+
+.hiw-step-num {
+  width: 28px;
+  height: 28px;
+  background: var(--gradient-blue);
+  color: var(--navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* Battery Diagram */
+.battery-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.diagram-battery {
+  display: flex;
+  align-items: stretch;
+  border: 2px solid var(--electric-blue);
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  min-height: 180px;
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+}
+
+.diagram-part {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 12px;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.anode {
+  background: rgba(0, 212, 255, 0.08);
+  border-right: 1px solid var(--border-color);
+}
+
+.cathode {
+  background: rgba(0, 102, 204, 0.1);
+}
+
+.diagram-ions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+.ion {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--electric-blue);
+  background: var(--blue-glow);
+  border: 1px solid var(--border-color);
+  padding: 3px 6px;
+  border-radius: 6px;
+  animation: ionMove 2s ease-in-out infinite;
+}
+
+@keyframes ionMove {
+  0%, 100% { transform: translateX(0); opacity: 0.6; }
+  50% { transform: translateX(8px); opacity: 1; }
+}
+
+.diagram-separator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  background: rgba(0, 212, 255, 0.04);
+  border-left: 1px dashed var(--border-color);
+  border-right: 1px dashed var(--border-color);
+  gap: 8px;
+}
+
+.sep-label {
+  writing-mode: vertical-rl;
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+.sep-line {
+  width: 2px;
+  height: 60px;
+  background: linear-gradient(180deg, transparent, var(--electric-blue), transparent);
+}
+
+.diagram-arrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--electric-blue);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.arrow-line {
+  flex: 1;
+  height: 2px;
+  background: var(--gradient-blue);
+  position: relative;
+}
+
+.arrow-line::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -4px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid var(--electric-blue);
+  border-right: 2px solid var(--electric-blue);
+  transform: rotate(45deg);
+}
+
+/* Specs */
+.specs-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 64px;
+}
+
+.spec-card {
+  background: var(--gradient-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.spec-card:hover {
+  border-color: var(--electric-blue);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-blue);
+}
+
+.spec-icon {
+  font-size: 28px;
+  color: var(--electric-blue);
+  margin-bottom: 12px;
+}
+
+.spec-value {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--electric-blue);
+  margin-bottom: 6px;
+}
+
+.spec-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Battery types */
+.battery-type-card {
+  position: relative;
+}
+
+.type-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.type-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.type-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.type-specs {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.type-spec {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 80px;
+}
+
+.ts-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.ts-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+/* Advantages */
+.advantage-card {
+  text-align: center;
+}
+
+.adv-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--blue-glow);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--electric-blue);
+  margin: 0 auto 16px;
+  transition: var(--transition);
+}
+
+.advantage-card:hover .adv-icon {
+  background: var(--electric-blue);
+  color: var(--navy);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+}
+
+.adv-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--white);
+}
+
+.adv-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .specs-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .how-it-works {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 24px;
+  }
+  .specs-row { grid-template-columns: repeat(2, 1fr); }
+}
