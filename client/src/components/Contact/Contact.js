@@ -40,7 +40,7 @@ const Contact = () => {
 
     setLoading(true);
     try {
-      await axios.post('http://localhost:5000/api/enquiry', form);
+      await axios.post('/api/enquiry', form);
       toast.success('🎉 Enquiry submitted! We\'ll contact you within 24 hours.');
       setForm(initialForm);
       setSubmitted(true);
