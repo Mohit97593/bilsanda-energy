@@ -15,6 +15,9 @@ app.use(corsMiddleware);
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
+// Debug route to see what Vercel sends
+app.all('/debug-req', (req, res) => res.json({ url: req.url, originalUrl: req.originalUrl, path: req.path }));
+
 // Routes
 app.use('/', enquiryRoutes);
 
