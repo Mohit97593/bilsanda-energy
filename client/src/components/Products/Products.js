@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaBolt, FaSolarPanel, FaIndustry, FaMobile, FaCheck, FaTh } from 'react-icons/fa';
+import { FaBolt, FaSolarPanel, FaIndustry, FaCheck, FaTh } from 'react-icons/fa';
 import './Products.css';
 
 const products = [
