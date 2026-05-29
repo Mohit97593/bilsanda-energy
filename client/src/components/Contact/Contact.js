@@ -8,7 +8,6 @@ const initialForm = {
   fullName: '',
   email: '',
   phone: '',
-  companyName: '',
   city: '',
   productInterest: '',
   quantity: '',
@@ -40,7 +39,7 @@ const Contact = () => {
 
     setLoading(true);
     try {
-      await axios.post('https://bilsanda-energy-api.vercel.app/api/enquiry', form);
+      await axios.post('https://fusion-energy-api.vercel.app/api/enquiry', form);
       toast.success('🎉 Enquiry submitted! We\'ll contact you within 24 hours.');
       setForm(initialForm);
       setSubmitted(true);
@@ -81,24 +80,23 @@ const Contact = () => {
                 <div className="info-icon"><FaPhone /></div>
                 <div>
                   <div className="info-label">Call Us</div>
-                  <a href="tel:+911334270456" className="info-value">+91 1334 270 456</a>
-                  <a href="tel:+918800123456" className="info-value">+91 8800 123 456</a>
+                  <a href="tel:+911334270456" className="info-value">+91 9917771801</a>
+                  <a href="tel:+918800123456" className="info-value">+91 9917771802</a>
                 </div>
               </div>
               <div className="info-item">
                 <div className="info-icon"><FaEnvelope /></div>
                 <div>
                   <div className="info-label">Email Us</div>
-                  <a href="mailto:info@bilsanda.com" className="info-value">info@bilsanda.com</a>
-                  <a href="mailto:sales@bilsanda.com" className="info-value">sales@bilsanda.com</a>
+                  <a href="mailto:info@fusionenergy.com" className="info-value">rajat0909@gmail.com</a>
                 </div>
               </div>
               <div className="info-item">
                 <div className="info-icon"><FaMapMarkerAlt /></div>
                 <div>
                   <div className="info-label">Factory Address</div>
-                  <span className="info-value">Plot No. 45, Industrial Area Phase-2,</span>
-                  <span className="info-value">Haridwar, Uttarakhand - 249403</span>
+                  <span className="info-value">Near by Bank of Baroda, Bisalpur Road Bilsanda</span>
+                  <span className="info-value">Dist. Pilibhit - 262202</span>
                 </div>
               </div>
             </div>
@@ -171,17 +169,6 @@ const Contact = () => {
                       value={form.phone}
                       onChange={handleChange}
                       required
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="companyName">Company Name</label>
-                    <input
-                      id="companyName"
-                      type="text"
-                      name="companyName"
-                      placeholder="Your company (optional)"
-                      value={form.companyName}
-                      onChange={handleChange}
                     />
                   </div>
                 </div>

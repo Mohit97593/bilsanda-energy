@@ -65,7 +65,7 @@ const WhyChooseUs = () => {
           <h2 className="section-title">India's Most Trusted <span>Lithium Battery</span> Brand</h2>
           <p className="section-subtitle">
             Backed by decades of expertise, world-class manufacturing, and an unwavering
-            commitment to quality — Bilsanda Energy is your reliable energy partner.
+            commitment to quality — Fusion Energy is your reliable energy partner.
           </p>
         </div>
 

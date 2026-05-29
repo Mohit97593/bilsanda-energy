@@ -3,7 +3,7 @@ const cors = require('cors');
 const corsOptions = {
   origin: [
     'http://localhost:3000',
-    'https://bilsanda-energy.vercel.app',
+    'https://fusion-energy.vercel.app',
     process.env.CORS_ORIGIN
   ].filter(Boolean),
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],

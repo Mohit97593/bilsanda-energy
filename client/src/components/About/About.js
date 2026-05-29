@@ -8,18 +8,18 @@ const batteryTypes = [
     icon: '⚡',
     name: 'Lithium-Ion (Li-ion)',
     desc: 'Most common type, used in smartphones, laptops, and EVs. High energy density with proven reliability.',
-    voltage: '3.6–3.7V',
-    energy: '150–200 Wh/kg',
-    cycles: '500–1000',
+    voltage: '12 – 72 V',
+    energy: '0.6–2.7 Wh/kg',
+    cycles: '1000–2000',
     color: '#00D4FF',
   },
   {
     icon: '🔋',
     name: 'Lithium Polymer (LiPo)',
     desc: 'Flexible, lightweight design ideal for drones, wearables, and compact electronics. Ultra-thin profile.',
-    voltage: '3.7V',
-    energy: '130–180 Wh/kg',
-    cycles: '300–500',
+    voltage: '12-72 V',
+    energy: '0.72–6.3 Wh/kg',
+    cycles: '3000–5000',
     color: '#00AAFF',
   },
   {
@@ -35,8 +35,8 @@ const batteryTypes = [
     icon: '⚙️',
     name: 'Lithium Manganese Oxide (LMO)',
     desc: 'High discharge rates with excellent thermal safety. Used in power tools and medical equipment.',
-    voltage: '3.9V',
-    energy: '100–150 Wh/kg',
+    voltage: '12V',
+    energy: '6.3 Wh/kg',
     cycles: '300–700',
     color: '#FFB800',
   },
@@ -52,10 +52,10 @@ const advantages = [
 ];
 
 const specs = [
-  { label: 'Nominal Voltage', value: '3.2V – 3.7V', icon: <FaBolt /> },
-  { label: 'Capacity Range', value: '100mAh – 500Ah', icon: <MdBattery90 /> },
-  { label: 'Energy Density', value: 'Up to 200 Wh/kg', icon: <FaAtom /> },
-  { label: 'Cycle Life', value: 'Up to 5000 cycles', icon: <FaRecycle /> },
+  { label: 'Battery Voltage Range', value: '12V – 72V', icon: <FaBolt /> },
+  { label: 'Capacity Range', value: '5Ah – 105Ah', icon: <MdBattery90 /> },
+  { label: 'Energy Density', value: '0.6 Wh/kg - 6.3 Wh/kg', icon: <FaAtom /> },
+  { label: 'Cycle Life', value: '2000 - 5000', icon: <FaRecycle /> },
 ];
 
 const About = () => {

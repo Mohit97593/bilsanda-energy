@@ -43,7 +43,7 @@ const Navbar = () => {
             <FaBolt />
           </div>
           <div className="logo-text">
-            <span className="logo-main">BILSANDA</span>
+            <span className="logo-main">FUSION ENERGY</span>
             <span className="logo-sub">ENERGY</span>
           </div>
         </a>

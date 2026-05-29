@@ -1,7 +1,7 @@
 {
-  "name": "bilsanda-energy-server",
+  "name": "fusion-energy-server",
   "version": "1.0.0",
-  "description": "Bilsanda Energy - Lithium Battery Company Backend",
+  "description": "Fusion Energy - Lithium Battery Company Backend",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -12,7 +12,7 @@
     "battery",
     "energy"
   ],
-  "author": "Bilsanda Energy",
+  "author": "Fusion Energy",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.1.14"

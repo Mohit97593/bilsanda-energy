@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { body, validationResult } = require('express-validator');
 const Enquiry = require('../models/Enquiry');
+const https = require('https');
 
 // Validation rules
 const enquiryValidation = [
@@ -36,6 +37,52 @@ router.post('/', enquiryValidation, async (req, res) => {
     });
 
     await enquiry.save();
+
+    // Send email using Brevo API
+    try {
+      const emailData = JSON.stringify({
+        sender: { name: "Fusion Energy Website", email: "no-reply@fusionenergy.com" },
+        to: [{ email: "mohitanshu7800@gmail.com", name: "Mohitanshu" }],
+        subject: "New Enquiry from Fusion Energy Website",
+        htmlContent: `
+          <h3>New Enquiry Details</h3>
+          <p><strong>Name:</strong> ${fullName}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Phone:</strong> ${phone}</p>
+          <p><strong>City:</strong> ${city}</p>
+          <p><strong>Product Interest:</strong> ${productInterest}</p>
+          <p><strong>Quantity:</strong> ${quantity}</p>
+          <p><strong>Message:</strong> ${message}</p>
+        `
+      });
+
+      const options = {
+        hostname: 'api.brevo.com',
+        path: '/v3/smtp/email',
+        method: 'POST',
+        headers: {
+          'accept': 'application/json',
+          'api-key': process.env.BREVO_API_KEY,
+          'content-type': 'application/json',
+          'content-length': Buffer.byteLength(emailData)
+        }
+      };
+
+      const reqEmail = https.request(options, (resEmail) => {
+        let data = '';
+        resEmail.on('data', (chunk) => { data += chunk; });
+        resEmail.on('end', () => { console.log('Brevo response:', data); });
+      });
+
+      reqEmail.on('error', (e) => {
+        console.error('Error sending email:', e);
+      });
+
+      reqEmail.write(emailData);
+      reqEmail.end();
+    } catch (emailError) {
+      console.error('Email error:', emailError);
+    }
 
     res.status(201).json({
       success: true,

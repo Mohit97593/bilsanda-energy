@@ -17,7 +17,7 @@ const Footer = () => {
               <div className="footer-logo">
                 <div className="footer-logo-icon"><FaBolt /></div>
                 <div className="footer-logo-text">
-                  <span className="fl-main">BILSANDA</span>
+                  <span className="fl-main">FUSION ENERGY</span>
                   <span className="fl-sub">ENERGY</span>
                 </div>
               </div>
@@ -61,7 +61,7 @@ const Footer = () => {
               <ul className="footer-links">
                 <li><a href="#products">EV Battery Pack 48V</a></li>
                 <li><a href="#products">EV Battery Pack 72V</a></li>
-                <li><a href="#products">EV Battery Pack 96V</a></li>
+                <li><a href="#products">EV Battery Pack 72V</a></li>
                 <li><a href="#products">Solar Storage Batteries</a></li>
                 <li><a href="#products">Industrial Batteries</a></li>
                 <li><a href="#products">Consumer Electronics</a></li>
@@ -75,15 +75,15 @@ const Footer = () => {
               <div className="footer-contact-items">
                 <div className="fci">
                   <FaMapMarkerAlt />
-                  <span>Plot No. 45, Industrial Area Phase-2, Haridwar, Uttarakhand - 249403</span>
+                  <span>Near by Bank of Baroda, Bisalpur Road Bilsanda, Dist. Pilibhit - 262202</span>
                 </div>
                 <div className="fci">
                   <FaPhone />
-                  <a href="tel:+911334270456">+91 1334 270 456</a>
+                  <a href="tel:+911334270456">+91 9917771801</a>
                 </div>
                 <div className="fci">
                   <FaEnvelope />
-                  <a href="mailto:info@bilsanda.com">info@bilsanda.com</a>
+                  <a href="mailto:info@fusionenergy.com">rajat0909@gmail.com</a>
                 </div>
               </div>
               <div className="footer-cert-chips">
@@ -99,12 +99,12 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="container">
           <div className="footer-bottom-content">
-            <p>© 2024 Bilsanda Energy Pvt. Ltd. All rights reserved.</p>
-            <div className="footer-bottom-links">
+            <p>© 2026 Fusion Energy Pvt. Ltd. All rights reserved.</p>
+            {/* <div className="footer-bottom-links">
               <a href="#home">Privacy Policy</a>
               <a href="#home">Terms of Service</a>
               <a href="#home">Sitemap</a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

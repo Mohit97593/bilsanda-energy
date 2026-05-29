@@ -21,7 +21,7 @@ app.use('/api/enquiries', require('./routes/enquiry'));
 
 // Health check
 app.get('/api/health', (req, res) => {
-  res.json({ success: true, message: 'Bilsanda Energy server is running!', timestamp: new Date() });
+  res.json({ success: true, message: 'Fusion Energy server is running!', timestamp: new Date() });
 });
 
 // 404 handler

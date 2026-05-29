@@ -4,50 +4,17 @@ import './Location.css';
 
 const branches = [
   {
-    type: 'Head Office',
-    city: 'New Delhi',
+    type: 'Main Factory',
+    city: 'Bilsanda, Uttar Pradesh',
     icon: <FaBuilding />,
-    address: '12th Floor, Tower B, DLF Cybercity, Sector 24, Gurugram, New Delhi - 122002',
-    phone: '+91 11 4500 7890',
-    email: 'delhi@bilsanda.com',
-    timing: 'Mon–Sat: 9:00 AM – 6:30 PM',
-    color: '#00D4FF',
-    mapQuery: 'DLF+Cybercity+Gurugram',
-  },
-  {
-    type: 'Manufacturing Plant',
-    city: 'Haridwar, Uttarakhand',
-    icon: <FaBuilding />,
-    address: 'Plot No. 45, Industrial Area Phase-2, Haridwar, Uttarakhand - 249403',
-    phone: '+91 1334 270 456',
-    email: 'plant@bilsanda.com',
-    timing: 'Mon–Sat: 8:00 AM – 5:00 PM',
+    address: 'Near by Bank of Baroda, Bisalpur Road Bilsanda, Dist. Pilibhit - 262202',
+    phone: '+91 9917771801',
+    email: 'rajat0909@gmail.com',
+    timing: 'Mon–Sat: 9:00 AM – 6:00 PM',
     color: '#00FF88',
-    mapQuery: 'Industrial+Area+Phase+2+Haridwar',
+    mapQuery: 'Bilsanda+Pilibhit',
     isMain: true,
-  },
-  {
-    type: 'R&D Center',
-    city: 'Bangalore',
-    icon: <FaBuilding />,
-    address: 'No. 34, Electronic City Phase 1, Hosur Road, Bangalore - 560100',
-    phone: '+91 80 6780 1234',
-    email: 'rd@bilsanda.com',
-    timing: 'Mon–Fri: 9:00 AM – 7:00 PM',
-    color: '#AA88FF',
-    mapQuery: 'Electronic+City+Bangalore',
-  },
-  {
-    type: 'Distribution Hub',
-    city: 'Mumbai',
-    icon: <FaBuilding />,
-    address: 'Unit 7, Bhiwandi Logistics Park, NH-3, Bhiwandi, Mumbai - 421302',
-    phone: '+91 22 6123 4567',
-    email: 'mumbai@bilsanda.com',
-    timing: 'Mon–Sat: 8:30 AM – 5:30 PM',
-    color: '#FFB800',
-    mapQuery: 'Bhiwandi+Logistics+Park+Mumbai',
-  },
+  }
 ];
 
 const Location = () => {
@@ -59,10 +26,10 @@ const Location = () => {
             <FaMapMarkerAlt /> Our Locations
           </div>
           <h2 className="section-title">Factory & <span>Branch Locations</span></h2>
-          <p className="section-subtitle">
+          {/* <p className="section-subtitle">
             Pan-India presence with our state-of-the-art manufacturing plant in Haridwar
             and offices across major cities.
-          </p>
+          </p> */}
         </div>
 
         {/* Main Map */}
@@ -71,13 +38,13 @@ const Location = () => {
             <FaMapMarkerAlt className="map-label-icon" />
             <div>
               <strong>Main Factory — Bilsanda, Uttar Pradesh</strong>
-              <span>Bilsanda, Uttar Pradesh - 262202, India</span>
+              <span>Near by Bank of Baroda, Bisalpur Road, Pilibhit - 262202, India</span>
             </div>
           </div>
           <div className="map-frame">
             <iframe
-              title="Bilsanda Energy Factory Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14059.513824895692!2d79.94016429691533!3d28.24136856760952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399f86450550fb1b%3A0x30f57e5be33dc539!2sBilsanda%2C%20Uttar%20Pradesh%20262202!5e0!3m2!1sen!2sin!4v1777390825235!5m2!1sen!2sin"
+              title="Fusion Energy Factory Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14059.513824895692!2d79.94016429691533!3d28.24136856760952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399f86450550fb1b%3A0x30f57e5be33dc539!2sFusion Energy%2C%20Uttar%20Pradesh%20262202!5e0!3m2!1sen!2sin!4v1777390825235!5m2!1sen!2sin"
               width="100%"
               height="420"
               style={{ border: 0 }}
@@ -89,7 +56,7 @@ const Location = () => {
         </div>
 
         {/* Branch Cards */}
-        <h3 className="branches-title" data-aos="fade-up">All Office Locations</h3>
+        <h3 className="branches-title" data-aos="fade-up">Office Location</h3>
         <div className="branches-grid" data-aos="fade-up">
           {branches.map((branch, i) => (
             <div
