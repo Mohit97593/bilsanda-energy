@@ -41,7 +41,7 @@ router.post(['/', '/enquiry', '/api/enquiry'], enquiryValidation, async (req, re
     // Send email using Brevo API
     try {
       const emailData = JSON.stringify({
-        sender: { name: "Fusion Energy Website", email: "no-reply@fusionenergy.com" },
+        sender: { name: "Fusion Energy Website", email: "mohitanshu7800@gmail.com" },
         to: [{ email: "mohitanshu7800@gmail.com", name: "Mohitanshu" }],
         subject: "New Enquiry from Fusion Energy Website",
         htmlContent: `
