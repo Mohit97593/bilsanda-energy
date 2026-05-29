@@ -56,30 +56,18 @@ router.post(['/', '/enquiry', '/api/enquiry'], enquiryValidation, async (req, re
         `
       });
 
-      const options = {
-        hostname: 'api.brevo.com',
-        path: '/v3/smtp/email',
+      const response = await fetch('https://api.brevo.com/v3/smtp/email', {
         method: 'POST',
         headers: {
           'accept': 'application/json',
           'api-key': process.env.BREVO_API_KEY,
-          'content-type': 'application/json',
-          'content-length': Buffer.byteLength(emailData)
-        }
-      };
-
-      const reqEmail = https.request(options, (resEmail) => {
-        let data = '';
-        resEmail.on('data', (chunk) => { data += chunk; });
-        resEmail.on('end', () => { console.log('Brevo response:', data); });
+          'content-type': 'application/json'
+        },
+        body: emailData
       });
 
-      reqEmail.on('error', (e) => {
-        console.error('Error sending email:', e);
-      });
-
-      reqEmail.write(emailData);
-      reqEmail.end();
+      const data = await response.json();
+      console.log('Brevo response:', data);
     } catch (emailError) {
       console.error('Email error:', emailError);
     }
