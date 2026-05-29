@@ -12,7 +12,7 @@ const enquiryValidation = [
 ];
 
 // POST /api/enquiry — Submit new enquiry
-router.post('/', enquiryValidation, async (req, res) => {
+router.post('/api/enquiry', enquiryValidation, async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({
@@ -99,8 +99,8 @@ router.post('/', enquiryValidation, async (req, res) => {
   }
 });
 
-// GET /api/enquiries — Get all enquiries (admin)
-router.get('/all', async (req, res) => {
+// GET /api/enquiries/all — Get all enquiries (admin)
+router.get('/api/enquiries/all', async (req, res) => {
   try {
     const enquiries = await Enquiry.find().sort({ createdAt: -1 });
     res.status(200).json({
