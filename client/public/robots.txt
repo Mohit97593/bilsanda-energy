@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fusionenergy.com/sitemap.xml
+Sitemap: https://fusionenergybilsanda.com/sitemap.xml

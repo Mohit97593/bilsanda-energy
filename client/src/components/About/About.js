@@ -27,19 +27,19 @@ const batteryTypes = [
     name: 'Lithium Iron Phosphate (LiFePO4)',
     desc: 'Safest chemistry with superior thermal stability. Perfect for solar storage and industrial applications.',
     voltage: '3.2V',
-    energy: '90–120 Wh/kg',
+    energy: '1.2 kwh – 7.5 kwh',
     cycles: '2000–5000',
     color: '#00FF88',
   },
-  {
-    icon: '⚙️',
-    name: 'Lithium Manganese Oxide (LMO)',
-    desc: 'High discharge rates with excellent thermal safety. Used in power tools and medical equipment.',
-    voltage: '12V',
-    energy: '6.3 Wh/kg',
-    cycles: '300–700',
-    color: '#FFB800',
-  },
+  // {
+  //   icon: '⚙️',
+  //   name: 'Lithium Manganese Oxide (LMO)',
+  //   desc: 'High discharge rates with excellent thermal safety. Used in power tools and medical equipment.',
+  //   voltage: '12V',
+  //   energy: '6.3 Wh/kg',
+  //   cycles: '300–700',
+  //   color: '#FFB800',
+  // },
 ];
 
 const advantages = [
