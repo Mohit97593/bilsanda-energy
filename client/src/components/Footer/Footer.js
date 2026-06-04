@@ -18,7 +18,7 @@ const Footer = () => {
                 <div className="footer-logo-icon"><FaBolt /></div>
                 <div className="footer-logo-text">
                   <span className="fl-main">FUSION ENERGY</span>
-                  <span className="fl-sub">ENERGY</span>
+                  {/* <span className="fl-sub">ENERGY</span> */}
                 </div>
               </div>
               <p className="footer-tagline">
@@ -60,7 +60,7 @@ const Footer = () => {
               <h4 className="footer-heading">Products</h4>
               <ul className="footer-links">
                 <li><a href="#products">EV Battery Pack 48V</a></li>
-                <li><a href="#products">EV Battery Pack 72V</a></li>
+                <li><a href="#products">EV Battery Pack 60V</a></li>
                 <li><a href="#products">EV Battery Pack 72V</a></li>
                 <li><a href="#products">Solar Storage Batteries</a></li>
                 <li><a href="#products">Industrial Batteries</a></li>

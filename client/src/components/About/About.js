@@ -31,15 +31,11 @@ const batteryTypes = [
     cycles: '2000–5000',
     color: '#00FF88',
   },
-  // {
-  //   icon: '⚙️',
-  //   name: 'Lithium Manganese Oxide (LMO)',
-  //   desc: 'High discharge rates with excellent thermal safety. Used in power tools and medical equipment.',
-  //   voltage: '12V',
-  //   energy: '6.3 Wh/kg',
-  //   cycles: '300–700',
-  //   color: '#FFB800',
-  // },
+  {
+    icon: '⚙️',
+    name: 'Solid State Battery (SSB)',
+    desc: 'Coming Soon...',
+  },
 ];
 
 const advantages = [
@@ -139,20 +135,22 @@ const About = () => {
               <div className="type-icon" style={{ color: type.color }}>{type.icon}</div>
               <h3 className="type-name" style={{ color: type.color }}>{type.name}</h3>
               <p className="type-desc">{type.desc}</p>
-              <div className="type-specs">
-                <div className="type-spec">
-                  <span className="ts-label">Voltage</span>
-                  <span className="ts-value">{type.voltage}</span>
+              {type.voltage && (
+                <div className="type-specs">
+                  <div className="type-spec">
+                    <span className="ts-label">Voltage</span>
+                    <span className="ts-value">{type.voltage}</span>
+                  </div>
+                  <div className="type-spec">
+                    <span className="ts-label">Energy</span>
+                    <span className="ts-value">{type.energy}</span>
+                  </div>
+                  <div className="type-spec">
+                    <span className="ts-label">Cycles</span>
+                    <span className="ts-value">{type.cycles}</span>
+                  </div>
                 </div>
-                <div className="type-spec">
-                  <span className="ts-label">Energy</span>
-                  <span className="ts-value">{type.energy}</span>
-                </div>
-                <div className="type-spec">
-                  <span className="ts-label">Cycles</span>
-                  <span className="ts-value">{type.cycles}</span>
-                </div>
-              </div>
+              )}
             </div>
           ))}
         </div>

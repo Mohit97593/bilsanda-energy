@@ -74,9 +74,9 @@ const products = [
     name: 'Inverter Battery Pack',
     tagline: 'For Forklifts, UPS & Telecom',
     voltage: '12V – 72V',
-    capacity: '200Ah – 200Ah',
+    capacity: '100Ah – 200Ah',
     energy: '1.2 kWh – 7.5 kWh',
-    chemistry: 'LiFePO4 / NMC',
+    chemistry: 'LiFePO4 ',
     cycles: '3000 - 5000',
     weight: '50 – 500 kg',
     features: ['RS485/CAN Interface', 'SCADA Integration', 'Fire Suppression Ready', 'IP55 Rated'],
@@ -90,14 +90,22 @@ const products = [
     name: 'E-Rickshaw Battery Pack',
     tagline: 'Powering Smart Devices ',
     voltage: '48V – 72V',
-    capacity: '1000mAh – 20000mAh',
+    capacity: '100mAh – 200mAh',
     energy: '1.2 kWh – 755 kWh',
-    chemistry: 'Li-ion / LiPo',
+    chemistry: 'LiPo',
     cycles: '3000 - 5000',
     weight: '20g – 500g',
     features: ['UN38.3 Certified', 'CE/RoHS Compliant', 'Custom Form Factor', 'PCB Protection'],
     color: '#FF6B6B',
     badge: 'Popular',
+  },
+  {
+    id: 7,
+    category: 'EV Battery',
+    icon: <FaBolt />,
+    name: 'Solid State Battery (SSB)',
+    tagline: 'Coming Soon...',
+    color: '#FFB800',
   },
 ];
 
@@ -153,33 +161,37 @@ const Products = () => {
               <h3 className="product-name">{product.name}</h3>
               <p className="product-tagline">{product.tagline}</p>
 
-              <div className="product-specs">
-                <div className="pspec">
-                  <span className="pspec-label">Voltage</span>
-                  <span className="pspec-value">{product.voltage}</span>
-                </div>
-                <div className="pspec">
-                  <span className="pspec-label">Capacity</span>
-                  <span className="pspec-value">{product.capacity}</span>
-                </div>
-                <div className="pspec">
-                  <span className="pspec-label">Chemistry</span>
-                  <span className="pspec-value" style={{ color: product.color }}>{product.chemistry}</span>
-                </div>
-                <div className="pspec">
-                  <span className="pspec-label">Cycles</span>
-                  <span className="pspec-value">{product.cycles}</span>
-                </div>
-              </div>
-
-              <div className="product-features">
-                {product.features.map((f, j) => (
-                  <div key={j} className="pfeat">
-                    <FaCheck className="pfeat-icon" style={{ color: product.color }} />
-                    <span>{f}</span>
+              {product.voltage && (
+                <div className="product-specs">
+                  <div className="pspec">
+                    <span className="pspec-label">Voltage</span>
+                    <span className="pspec-value">{product.voltage}</span>
                   </div>
-                ))}
-              </div>
+                  <div className="pspec">
+                    <span className="pspec-label">Capacity</span>
+                    <span className="pspec-value">{product.capacity}</span>
+                  </div>
+                  <div className="pspec">
+                    <span className="pspec-label">Chemistry</span>
+                    <span className="pspec-value" style={{ color: product.color }}>{product.chemistry}</span>
+                  </div>
+                  <div className="pspec">
+                    <span className="pspec-label">Cycles</span>
+                    <span className="pspec-value">{product.cycles}</span>
+                  </div>
+                </div>
+              )}
+
+              {product.features && product.features.length > 0 && (
+                <div className="product-features">
+                  {product.features.map((f, j) => (
+                    <div key={j} className="pfeat">
+                      <FaCheck className="pfeat-icon" style={{ color: product.color }} />
+                      <span>{f}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
 
               <a
                 href="#contact"
