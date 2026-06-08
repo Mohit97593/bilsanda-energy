@@ -44,7 +44,7 @@ const Location = () => {
           <div className="map-frame">
             <iframe
               title="Fusion Energy Factory Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14059.513824895692!2d79.94016429691533!3d28.24136856760952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399f86450550fb1b%3A0x30f57e5be33dc539!2sFusion Energy%2C%20Uttar%20Pradesh%20262202!5e0!3m2!1sen!2sin!4v1777390825235!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.548009019372!2d79.94145420423554!3d28.24401387389362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399f8783dcd2ec7f%3A0x91c4b678fb98c4c!2sFusion%20energy%20Bilsanda!5e0!3m2!1sen!2sin!4v1780908333392!5m2!1sen!2sin"
               width="100%"
               height="420"
               style={{ border: 0 }}

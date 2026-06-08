@@ -7,6 +7,7 @@ const products = [
     id: 1,
     category: 'EV Battery',
     icon: <FaBolt />,
+    image: '/battery-scooty-cabinet.jpg',
     name: 'EV Battery Pack — 48V-60V',
     tagline: 'Perfect for E-Bikes & E-Scooters',
     voltage: '48V-60V',
@@ -23,6 +24,7 @@ const products = [
     id: 2,
     category: 'EV Battery',
     icon: <FaBolt />,
+    image: '/battery-scooty-60v-30ah-frontback.jpg',
     name: 'EV Battery Pack — 72V',
     tagline: 'Ideal for E-Rickshaws & Cargo EVs',
     voltage: '72V',
@@ -39,6 +41,7 @@ const products = [
     id: 3,
     category: 'EV Battery',
     icon: <FaBolt />,
+    image: '/battery-scooty-box-60v-30ah.jpg',
     name: 'EV Battery Pack — 48V - 72V',
     tagline: 'High-Power for Electric Trucks',
     voltage: '48V -72V',
@@ -55,6 +58,7 @@ const products = [
     id: 4,
     category: 'Solar Battery',
     icon: <FaSolarPanel />,
+    image: '/battery-inverter-12v-100ah.jpg',
     name: 'Solar Storage Battery',
     tagline: 'Energy Independence for Homes & Farms',
     voltage: '24V / 48V',
@@ -71,6 +75,7 @@ const products = [
     id: 5,
     category: 'Inverter Battery',
     icon: <FaIndustry />,
+    image: '/battery-inverter-48v-200ah.jpg',
     name: 'Inverter Battery Pack',
     tagline: 'For Forklifts, UPS & Telecom',
     voltage: '12V – 72V',
@@ -87,6 +92,7 @@ const products = [
     id: 6,
     category: 'E-Rickshaw Battery',
     icon: <FaMobile />,
+    image: '/battery-erickshaw-48v-105ah.jpg',
     name: 'E-Rickshaw Battery Pack',
     tagline: 'Powering Smart Devices ',
     voltage: '48V – 72V',
@@ -154,9 +160,15 @@ const Products = () => {
                   {product.badge}
                 </div>
               )}
-              <div className="product-icon" style={{ color: product.color, background: `${product.color}18` }}>
-                {product.icon}
-              </div>
+              {product.image ? (
+                <div className="product-img-wrap">
+                  <img src={product.image} alt={product.name} className="product-img" />
+                </div>
+              ) : (
+                <div className="product-icon" style={{ color: product.color, background: `${product.color}18` }}>
+                  {product.icon}
+                </div>
+              )}
               <div className="product-category" style={{ color: product.color }}>{product.category}</div>
               <h3 className="product-name">{product.name}</h3>
               <p className="product-tagline">{product.tagline}</p>

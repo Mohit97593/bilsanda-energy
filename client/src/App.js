@@ -10,6 +10,7 @@ import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import Products from './components/Products/Products';
 import Manufacturing from './components/Manufacturing/Manufacturing';
+import Gallery from './components/Gallery/Gallery';
 import Location from './components/Location/Location';
 import WhyChooseUs from './components/WhyChooseUs/WhyChooseUs';
 import Contact from './components/Contact/Contact';
@@ -51,6 +52,7 @@ function App() {
         <Hero />
         <About />
         <Products />
+        <Gallery />
         <Manufacturing />
         <WhyChooseUs />
         <Location />

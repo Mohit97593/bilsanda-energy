@@ -27,9 +27,9 @@ const Footer = () => {
               </p>
               <div className="footer-socials">
                 <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
-                <a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="Twitter"><FaTwitter /></a>
-                <a href="https://youtube.com" target="_blank" rel="noreferrer" aria-label="YouTube"><FaYoutube /></a>
-                <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram"><FaInstagram /></a>
+                <a href="https://x.com/fusionenergyFE" target="_blank" rel="noreferrer" aria-label="Twitter"><FaTwitter /></a>
+                <a href="https://www.youtube.com/@FusionEnergyBilsanda" target="_blank" rel="noreferrer" aria-label="YouTube"><FaYoutube /></a>
+                <a href="https://www.instagram.com/fusionenergybilsanda?igsh=eGkxc3EyMjJpd29r" target="_blank" rel="noreferrer" aria-label="Instagram"><FaInstagram /></a>
               </div>
             </div>
 

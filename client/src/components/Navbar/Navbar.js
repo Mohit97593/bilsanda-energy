@@ -6,6 +6,7 @@ const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
   { label: 'Products', href: '#products' },
+  { label: 'Gallery', href: '#gallery' },
   { label: 'Manufacturing', href: '#manufacturing' },
   { label: 'Why Us', href: '#why-us' },
   { label: 'Location', href: '#location' },
